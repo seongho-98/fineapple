@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -38,4 +39,12 @@
 	<bean id="my" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="config"></constructor-arg>
 	</bean>
+=======
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+>>>>>>> a678317d98bf05c0b88a3899a81b2933101ffb3e
 </beans>
