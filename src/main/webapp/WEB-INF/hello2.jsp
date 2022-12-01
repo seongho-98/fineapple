@@ -7,5 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-TeST라고 나오면 성공
+
 </body>
+</html>
