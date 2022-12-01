@@ -1,8 +1,16 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,java,eclipse
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,java,eclipse
+<<<<<<< HEAD
+
 ### etc ###
 target
 src/main/resources/properties/datasource.properties
+
+=======
+### etc ###
+target
+src/main/resources/properties/datasource.properties
+>>>>>>> a678317d98bf05c0b88a3899a81b2933101ffb3e
 ### IntelliJ IDEA ###
 .idea
 *.iws
@@ -11,6 +19,10 @@ src/main/resources/properties/datasource.properties
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+<<<<<<< HEAD
+
+=======
+>>>>>>> a678317d98bf05c0b88a3899a81b2933101ffb3e
 ### Eclipse ###
 .metadata
 bin/
@@ -23,6 +35,55 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+<<<<<<< HEAD
+
+# Eclipse Core
+.project
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+=======
 # Eclipse Core
 .project
 # JDT-specific (Eclipse Java Development Tools)
@@ -54,10 +115,35 @@ local.properties
 # Annotation Processing
 .apt_generated/
 .apt_generated_test/
+>>>>>>> a678317d98bf05c0b88a3899a81b2933101ffb3e
 # Scala IDE specific (Scala & Java development for Eclipse)
 .cache-main
 .scala_dependencies
 .worksheet
+<<<<<<< HEAD
+
+# Uncomment this line if you wish to ignore the project description file.
+# Typically, this file would be tracked if it contains build/dependency configurations:
+#.project
+
+### Eclipse Patch ###
+# Spring Boot Tooling
+.sts4-cache/
+
+### Java ###
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+=======
 # Uncomment this line if you wish to ignore the project description file.
 # Typically, this file would be tracked if it contains build/dependency configurations:
 #.project
@@ -73,6 +159,7 @@ local.properties
 *.ctxt
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+>>>>>>> a678317d98bf05c0b88a3899a81b2933101ffb3e
 # Package Files #
 *.jar
 *.war
@@ -81,35 +168,72 @@ local.properties
 *.zip
 *.tar.gz
 *.rar
+<<<<<<< HEAD
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+=======
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+>>>>>>> a678317d98bf05c0b88a3899a81b2933101ffb3e
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
+<<<<<<< HEAD
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+=======
 # Dump file
 *.stackdump
 # Folder config file
 [Dd]esktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+>>>>>>> a678317d98bf05c0b88a3899a81b2933101ffb3e
 # Windows Installer files
 *.cab
 *.msi
 *.msix
 *.msm
 *.msp
+<<<<<<< HEAD
+
 # Windows shortcuts
 *.lnk
+
+=======
+# Windows shortcuts
+*.lnk
+>>>>>>> a678317d98bf05c0b88a3899a81b2933101ffb3e
 ### macOS ###
 # General
 .DS_Store
 .AppleDouble
 .LSOverride
+<<<<<<< HEAD
+
+### macOS Patch ###
+# iCloud generated files
+*.icloud
+
+# End of https://www.toptal.com/developers/gitignore/api/windows,mac,java,eclipse,intellij
+=======
 ### macOS Patch ###
 # iCloud generated files
 *.icloud
 # End of https://www.toptal.com/developers/gitignore/api/windows,mac,java,eclipse,intellij
+>>>>>>> a678317d98bf05c0b88a3899a81b2933101ffb3e
