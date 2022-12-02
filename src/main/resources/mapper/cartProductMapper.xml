@@ -8,7 +8,7 @@
 		<result property="productId" column="cp.product_id" />
 	</resultMap> -->
 	
-	<select id="getCartProductList" parameterType="memberVO" resultMap="cartProductVO">
+	<select id="getCartProductList" parameterType="memberVO" resultType="cartProductVO">
 		select cp.cart_id, cp.cart_product_id, cp.product_id from cart as c join cart_product as cp on c.cart_id = cp.cart_id where c.member_id = #{member_id};
 	</select>
 	
