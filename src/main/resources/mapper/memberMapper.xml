@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
+
+	<!-- 회원 가입 -->
+	<insert id="create" parameterType="MemberVO">
+		insert into member values (#{member_id}, #{member_pw}, #{member_name}, #{member_tel})
+	</insert>
+	
+	<!-- 회원 조회 -->
+	<select id="one" parameterType="MemberVO" resultType="MemberVO">
+		select * from member where member id = #{member_id}
+	</select>
+	
+	<!-- 회원 수정 -->
+	<update id="up" parameterType="MemberVO">
+		update member set member_name = #{member_name}, member_tel = #{member_tel} where member_id = #(member_id)
+	</update>
+	
+	<!-- 회원 삭제 -->
+	<delete id="del" parameterType="MemberVO">
+		delete from member where id = #{id}
+	</delete>
 	
 </mapper>
