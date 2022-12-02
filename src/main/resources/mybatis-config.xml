@@ -6,18 +6,18 @@
 
    <typeAliases>
       <typeAlias type="com.multi.fineapple.vo.CartVO" alias="cartVO"></typeAlias>
+      <typeAlias type="com.multi.fineapple.vo.MemberVO" alias="memberVO"></typeAlias>
       <typeAlias type="com.multi.fineapple.vo.CartProductVO" alias="cartProductVO"></typeAlias>
       <typeAlias type="com.multi.fineapple.vo.CategoryVO" alias="categoryVO"></typeAlias>
       <typeAlias type="com.multi.fineapple.vo.OrderProductVO" alias="orderProductVO"></typeAlias>
-
    </typeAliases>
    <mappers>
     <!-- SQL문 정의하는 파일들의 목록을 지정. --> 
       <mapper resource="mapper/cartMapper.xml" />
+      <mapper resource="mapper/memberMapper.xml" />
       <mapper resource="mapper/cartProductMapper.xml" />
       <mapper resource="mapper/categoryMapper.xml" />
       <mapper resource="mapper/orderProductMapper.xml" />
-
    </mappers>
 
 </configuration>
