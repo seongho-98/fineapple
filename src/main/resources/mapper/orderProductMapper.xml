@@ -3,7 +3,7 @@
 <mapper namespace="mapper.orderProductMapper">
 
 	<!-- order 후 order 상품 테이블에 record 추가 -->
-	<insert id="insert" parameterType="insertVO">
+	<insert id="insert" parameterType="orderProductVO">
 		insert into order_product values ( null , #{orderId}, #{productId})
 	</insert>
 
