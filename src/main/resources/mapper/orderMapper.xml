@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="order">
+
+	<insert id="orderInsert" parameterType="orderVO">
+		insert into value(null, #{buyer_id}, #{deal_date}, #{order_price})
+	</insert>
+	
+	<select id="orderAll" resultType="orderVO">
+		select * from order where member_id = #{member_id}
+	</select>
+	
+</mapper>
