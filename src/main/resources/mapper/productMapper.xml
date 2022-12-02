@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.productMapper">
+
+	<!-- 주문한 상품 데이터 조회 -->
+	<select id="orderProduct" parameterType="ProductVO" resultType="ProductVO" > select p.product_id, p.product_name,
+		p.seller_id, p.product_price from product as p where p.product_id =
+		#{member_id}</select>
+	
+	<!-- 최신순 정렬 -->
+	<select id="newProduct" resultType="ProductVO" >select * from product order by upload_date desc</select>
+	
+	<!-- 전체 상품 조회 -->
+	<select id="allProduct" resultType="ProductVO" >select * from product</select>
+	
+	<!-- 거래 전 상품만 조회 -->
+	<select id="beforeProduct" parameterType="ProductVO" resultType="ProductVO" >select * from product where product_status=#{거래전}</select>
+	
+	<!-- 카테고리 별 상품 조회 -->
+	<select id="categoryProduct" parameterType="ProductVO" resultType="ProductVO" >select * from product where category_id=#{id}</select>
+	
+	<!-- 키워드 검색 -->
+	<select id="searchProduct" parameterType="ProductVO" resultType="ProductVO" >select * from product where product_name like #{%product_name%}</select>
+	
+	<!-- 찜 상품 조회 -->
+	<select id="likeProduct" parameterType="ProductVO" resultType="ProductVO" >select * from product, like left join like on product.product_id = like.product_id and where like.member_id = #{member_id}</select>
+	
+	<!-- 같은 카테고리 상품을 낮은 가격 순으로 3개 조회 -->
+	<select id="pushProduct" parameterType="ProductVO" resultType="ProductVO" >select product_id, product_name, product_price, product_img from product 
+where product_category = #{productCategory} order by produyct_price ASC limit 3</select>
+	
+	<!-- 하나의 상품 정보 가져옴 -->
+	<select id="oneProduct" parameterType="ProductVO" resultType="ProductVO" >select * from product where product_id = #{productId}</select>
+	
+	<!-- 상품 등록 -->
+	<insert id="insertProduct" parameterType="ProductVO" >insert into product values(null, #{productName}, #{sellerId}, #{productPrice}, #{uploadDate}, #{productCategory}, #{productStatus}, #{productImg}, #{productInfo}</insert>
+
+</mapper>
