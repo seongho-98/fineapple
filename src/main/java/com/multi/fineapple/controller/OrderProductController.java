@@ -3,12 +3,11 @@ package com.multi.fineapple.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import com.multi.fineapple.dao.CartDAO;
-
+import com.multi.fineapple.dao.OrderProductDAO;
 
 @Controller
-public class CartController {
-	
+public class OrderProductController {
+
 	@Autowired
-	private CartDAO cartDao;
+	OrderProductDAO dao;
 }

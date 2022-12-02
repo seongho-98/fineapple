@@ -2,11 +2,11 @@ package com.multi.fineapple.dao;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
-@Repository
-public class CartDAO {
+@Component
+public class LikeDAO {
 
 	@Autowired
-	private SqlSessionTemplate my;
+	SqlSessionTemplate my;
 }
