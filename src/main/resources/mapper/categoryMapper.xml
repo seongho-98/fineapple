@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.categoryMapper">
+	<!-- category select all -->
+
+	<select id="all" resultType="categoryVO">
+		select * from category
+	</select>
+
+    <!-- 상품의 카테고리 정보  -->
+    <select id="one" parameterType="String" resultType="categoryVO">
+    	select category_id where category_name = #{categoryName}	
+    </select>
+ 
+</mapper>
