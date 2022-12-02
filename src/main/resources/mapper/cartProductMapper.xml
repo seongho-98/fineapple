@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cartProduct">
+
+	<!-- <resultMap id="cartProductResult" type="cartProductVO">
+		<id property="cartId" column="cp.cart_id" />
+		<result property="cartProductId" column="cp.cart_product_id" />
+		<result property="productId" column="cp.product_id" />
+	</resultMap> -->
+	
+	<select id="getCartProductList" parameterType="memberVO" resultMap="cartProductVO">
+		select cp.cart_id, cp.cart_product_id, cp.product_id from cart as c join cart_product as cp on c.cart_id = cp.cart_id where c.member_id = #{member_id};
+	</select>
+	
+	<delete id="delete" parameterType="productVO">
+		delete from cart_product where product_id = #{product_id};
+	</delete>
+	
+	<insert id="insert" parameterType="productVO">
+		insert into cart_product values(null, #{cartId}, #{productId});
+	</insert>
+
+</mapper>
