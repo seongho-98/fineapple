@@ -26,8 +26,7 @@
 	<select id="likeProduct" parameterType="ProductVO" resultType="ProductVO" >select * from product, like left join like on product.product_id = like.product_id and where like.member_id = #{member_id}</select>
 	
 	<!-- 같은 카테고리 상품을 낮은 가격 순으로 3개 조회 -->
-	<select id="pushProduct" parameterType="ProductVO" resultType="ProductVO" >select product_id, product_name, product_price, product_img from product 
-where product_category = #{productCategory} order by produyct_price ASC limit 3</select>
+	<select id="pushProduct" parameterType="ProductVO" resultType="ProductVO" >select product_id, product_name, product_price, product_img from product where product_category = #{productCategory} order by produyct_price ASC limit 3</select>
 	
 	<!-- 하나의 상품 정보 가져옴 -->
 	<select id="oneProduct" parameterType="ProductVO" resultType="ProductVO" >select * from product where product_id = #{productId}</select>
