@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>장바구니</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 <script>
 	$(function() {
 		getTotalPrice();
@@ -26,6 +26,10 @@
 			}
 			getTotalPrice();
 		});
+		
+		$('button').click(function() {
+			orders();
+		})
 	});
 	
 	// 총 주문 금액 계산
@@ -42,7 +46,7 @@
 	
 	// 카트 주문
 	function orders() {
-		let url = "/cart/order";
+		let url = "cart/order";
 		
 		let dataList = new Array();
 		let paramData = new Object();
@@ -51,6 +55,25 @@
 			let cartProductId = $(this).val();
 			let data = new Object();
 			data['cartProductId'] = cartProductId;
+			dataList.push(data);
+		});
+		
+		paramData['cartProductVOList'] = dataList;
+		
+		let param = JSON.stringify(paramData);
+		
+		$.ajax({
+			url: url,
+			type: "POST",
+			contentType: "application/json",
+			data: param,
+			dataType: "json",
+			success: function(result, status) {
+				alert("주문이 완료되었습니다.");
+			},
+			error: function(error) {
+				alert("주문이 실패되었습니다.");
+			}
 		});
 	}
 </script>

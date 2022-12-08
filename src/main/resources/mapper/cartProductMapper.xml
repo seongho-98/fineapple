@@ -7,10 +7,15 @@
 		<result property="cartProductName" column="product_name" />
 		<result property="cartProductPrice" column="product_price" />
 		<result property="cartProductImg" column="product_img" />
+		<result property="productId" column="product_id" />
 	</resultMap>
 	
-	<select id="getCartProductDetailList" parameterType="cartVO" resultMap="cartProductDetailResult">
-		select cp.cart_product_id, p.product_name, p.product_price, p.product_img from cart_product cp join product p on cp.product_id = p.product_id where cp.cart_id = #{cartId};
+	<select id="getCartProductDetailListByCartProduct" parameterType="cartProductVO" resultMap="cartProductDetailResult">
+		select cp.cart_product_id, p.product_name, p.product_price, p.product_img, p.product_id from cart_product cp join product p on cp.product_id = p.product_id where cp.cart_product_id = #{cartProductId};
+	</select>
+	
+	<select id="getCartProductDetailListByCart" parameterType="cartVO" resultMap="cartProductDetailResult">
+		select cp.cart_product_id, p.product_name, p.product_price, p.product_img, p.product_id from cart_product cp join product p on cp.product_id = p.product_id where cp.cart_id = #{cartId};
 	</select>
 	
 	<select id="getCartProductList" parameterType="memberVO" resultType="cartProductVO">
