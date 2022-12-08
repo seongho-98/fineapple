@@ -2,11 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cartProduct">
 
-	<!-- <resultMap id="cartProductResult" type="cartProductVO">
-		<id property="cartId" column="cp.cart_id" />
-		<result property="cartProductId" column="cp.cart_product_id" />
-		<result property="productId" column="cp.product_id" />
-	</resultMap> -->
+	<resultMap id="cartProductDetailResult" type="cartProductDetailVO">
+		<id property="cartProductId" column="cart_product_id" />
+		<result property="cartProductName" column="product_name" />
+		<result property="cartProductPrice" column="product_price" />
+		<result property="cartProductImg" column="product_img" />
+	</resultMap>
+	
+	<select id="getCartProductDetailList" parameterType="cartVO" resultMap="cartProductDetailResult">
+		select cp.cart_product_id, p.product_name, p.product_price, p.product_img from cart_product cp join product p on cp.product_id = p.product_id where cp.cart_id = #{cartId};
+	</select>
 	
 	<select id="getCartProductList" parameterType="memberVO" resultType="cartProductVO">
 		select cp.cart_id, cp.cart_product_id, cp.product_id from cart as c join cart_product as cp on c.cart_id = cp.cart_id where c.member_id = #{member_id};

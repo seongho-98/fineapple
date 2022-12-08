@@ -13,6 +13,7 @@
       <typeAlias type="com.multi.fineapple.vo.CartProductVO" alias="cartProductVO"></typeAlias>
       <typeAlias type="com.multi.fineapple.vo.CategoryVO" alias="categoryVO"></typeAlias>
       <typeAlias type="com.multi.fineapple.vo.OrderProductVO" alias="orderProductVO"></typeAlias>
+      <typeAlias type="com.multi.fineapple.vo.CartProductDetailVO" alias="cartProductDetailVO"></typeAlias>
 
    </typeAliases>
    <mappers>
